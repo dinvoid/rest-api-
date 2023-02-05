@@ -74,7 +74,7 @@ app.post('/books',(req,res)=>{
 });
 
 //DELETE BOOKS FROM DOCUMENTS USING ID
-app.delete('/books/:id',(req,res)=>{
+app.delete('/books/delete/:id',(req,res)=>{
 	if(ObjectId.isValid(req.params.id)){
       db.collection('books')
         .deleteOne({_id: ObjectId(req.params.id)})
